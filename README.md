@@ -40,3 +40,24 @@ source ~/.bashrc
 - `..` - Go up one directory
 - `py` - Short for python
 - `activate` - Quick venv activation
+
+## Backup/Restore Instructions:
+
+### To restore on another machine:
+```bash
+git clone https://github.com/wtvar/dotfiles.git
+cd dotfiles
+cp .bashrc ~/.bashrc
+# Follow setup instructions above
+source ~/.bashrc
+```
+
+### To update backup when you make changes:
+```bash
+# Navigate to your dotfiles repo
+cd /path/to/dotfiles
+# Copy current bashrc
+cp ~/.bashrc .
+# Commit and push changes
+git add . && git commit -m "Update dotfiles" && git push
+```
